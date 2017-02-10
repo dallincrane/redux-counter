@@ -358,6 +358,7 @@ Create two new action types, `UNDO` and `REDO`, as well as their corresponding a
 
 **Detailed Instructions**
 
+<!-- The second sentence here needs to be restructured. -->
 Open up `src/ducks/counter.js`. Beneath the other actions create two more - `UNDO`, set equal to `"UNDO"`, and `REDO`, set equal to `"REDO"`. Create corresponding action creators `undo` and `redo` alongside your other action creators. Because we will already have all the data we need on `state`, the actions returned by these action creators only need to have a `type` property. Change the `initialState` variable by adding two properties - `futureValues` and `previousValues`, both set to empty arrays.
 
 Because we changed how `initialState` looks we need to update how we handle existing actions before adding handlers for the new ones. Adjust both the `INCREMENT` and `DECREMENT` cases so that they return an object that looks something like this:
